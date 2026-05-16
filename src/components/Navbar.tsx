@@ -1,4 +1,3 @@
-// C:\Users\Aaron Hope\Desktop\audiophile\frontend\src\components\Navbar.tsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
@@ -26,7 +25,7 @@ const Navbar: React.FC = () => {
           <Link to="/">audiophile</Link>
         </div>
 
-        {/* Navigation Links */}
+      
         <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
           <ul className={styles.navList}>
             <li><Link to="/" onClick={() => setIsMenuOpen(false)}>HOME</Link></li>
@@ -36,7 +35,7 @@ const Navbar: React.FC = () => {
           </ul>
         </nav>
 
-        {/* Cart Icon - No count badge */}
+        
         <div className={styles.cart}>
           <button className={styles.cartButton} aria-label="Shopping cart">
             <img src={cartIcon} alt="Cart" />

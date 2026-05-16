@@ -1,4 +1,3 @@
-/* C:\Users\Aaron Hope\Desktop\audiophile\frontend\src\components\Navbar.module.css */
 .navbar {
   background-color: transparent;
   padding: 1.5rem 0;
@@ -104,12 +103,12 @@
   position: relative;
 }
 
-/* Remove the underline/hover line effect */
+
 .navList li a::after {
   display: none;
 }
 
-/* Only color change on hover - no underline */
+
 .navList li a:hover {
   color: #D87D4A;
 }
@@ -143,7 +142,7 @@
   filter: brightness(0) invert(1);
 }
 
-/* Remove the cart count */
+
 .cartCount {
   display: none;
 }

@@ -1,5 +1,3 @@
-/* HomePage.module.css - Professional Audiophile Styling */
-
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 :root {
@@ -35,10 +33,7 @@ body {
   padding: 0 2rem;
 }
 
-/* ============================================
-   HERO SECTION - Content Aligned to Left
-   No speaker or pattern - elegant left-aligned typography
-   ============================================ */
+
 .hero {
   background-color: var(--dark);
   min-height: 800px;
@@ -156,9 +151,6 @@ body {
   left: 100%;
 }
 
-/* ============================================
-   CATEGORIES SECTION
-   ============================================ */
 .categories {
   padding: 5rem 0;
   background: var(--white);
@@ -240,10 +232,7 @@ body {
   gap: 0.9rem;
 }
 
-/* ============================================
-   ZX9 SECTION - Pattern Circles FULLY VISIBLE
-   Pattern size INCREASED, Speaker size INCREASED and shifted DOWN
-   ============================================ */
+
 .zx9Section {
   padding: 4rem 0;
   background: var(--white);
@@ -296,7 +285,6 @@ body {
   width: 100%;
 }
 
-/* Left side image wrapper with pattern integration - ENLARGED */
 .zx9Image {
   flex: 1.2;
   text-align: center;
@@ -317,7 +305,7 @@ body {
   min-height: 500px;
 }
 
-/* Inner pattern circle - MORE VISIBLE AND LARGER */
+
 .patternCircleBg {
   position: absolute;
   width: 100%;
@@ -334,9 +322,7 @@ body {
   filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.2));
   transform: scale(1.15);
 }
-/* ============================================
-   ZX9 SECTION - Speaker inserted into container with bottom covered
-   ============================================ */
+
 .zx9Section {
   padding: 4rem 0;
   background: var(--white);
@@ -499,9 +485,7 @@ body {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
-/* ============================================
-   ZX7 SECTION
-   ============================================ */
+
 .zx7Section {
   padding: 4rem 0;
   background: var(--white);
@@ -666,9 +650,7 @@ body {
   transform: translateY(-2px);
 }
 
-/* ============================================
-   BEST GEAR SECTION
-   ============================================ */
+
 .bestGear {
   padding: 5rem 0;
   background: var(--white);

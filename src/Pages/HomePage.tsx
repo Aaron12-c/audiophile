@@ -1,4 +1,3 @@
-// C:\Users\Aaron Hope\Desktop\audiophile\frontend\src\Pages\HomePage.tsx
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import styles from './HomePage.module.css';
@@ -24,9 +23,7 @@ const HomePage: React.FC = () => {
 
   return (
     <div className={styles.homepage}>
-      {/* ============================================
-          HERO SECTION - Premium Hero with Background
-          ============================================ */}
+      
       <section 
         className={styles.hero}
         style={{ backgroundImage: `url(${heroImage})` }}
@@ -47,9 +44,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* ============================================
-          CATEGORIES SECTION - Three Product Categories
-          ============================================ */}
+   
       <section className={styles.categories}>
         <div className={styles.container}>
           <div className={styles.categoryGrid}>
@@ -89,10 +84,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* ============================================
-          ZX9 FEATURED SECTION - Premium Speaker Showcase
-          Pattern Circles Fully Visible, Speaker Centered on Pattern
-          ============================================ */}
+      
       <section className={styles.zx9Section}>
         <div className={styles.zx9Container}>
           {/* Pattern Circles Background - Fully visible, prominent */}
@@ -105,7 +97,7 @@ const HomePage: React.FC = () => {
           </div>
           
           <div className={styles.zx9Content}>
-            {/* Left Side - Product Image with Pattern Integration */}
+           
             <div className={`${styles.zx9Image} ${isVisible ? styles.fadeInLeft : ''}`}>
               <div className={styles.zx9ImageWrapper}>
                 <div className={styles.patternCircleBg}>
@@ -119,7 +111,7 @@ const HomePage: React.FC = () => {
               </div>
             </div>
             
-            {/* Right Side - Text Content */}
+           
             <div className={`${styles.zx9Text} ${isVisible ? styles.fadeInRight : ''}`}>
               <h2>ZX9 SPEAKER</h2>
               <p>
@@ -134,9 +126,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* ============================================
-          ZX7 SECTION - Speaker with Background Image
-          ============================================ */}
+     
       <section className={styles.zx7Section}>
         <div className={styles.container}>
           <div className={`${styles.zx7Card} ${isVisible ? styles.zoomIn : ''}`}>
@@ -150,9 +140,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* ============================================
-          YX1 SECTION - Earphones Showcase
-          ============================================ */}
+     
       <section className={styles.yx1Section}>
         <div className={styles.container}>
           <div className={styles.yx1Grid}>
@@ -174,9 +162,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      {/* ============================================
-          BEST GEAR SECTION - About Audiophile
-          ============================================ */}
+      
       <section className={styles.bestGear}>
         <div className={styles.container}>
           <div className={styles.gearGrid}>
@@ -185,12 +171,11 @@ const HomePage: React.FC = () => {
                 BRINGING YOU THE <span>BEST</span> AUDIO GEAR
               </h2>
               <p>
-                Located at the heart of New York City, Audiophile is the premier store 
-                for high end headphones, earphones, speakers, and audio accessories. 
-                We have a large showroom and luxury demonstration rooms available for 
-                you to browse and experience a wide range of our products. 
-                Stop by our store to meet some of the fantastic people who make 
-                Audiophile the best place to buy your portable audio equipment.
+               Located at the heart of New York City, 
+               Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories.
+                We have a large showroom and luxury demonstration rooms available for you to browse and experience a 
+                wide range of our products. 
+               Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.
               </p>
             </div>
             <div className={`${styles.gearImage} ${isVisible ? styles.fadeInRight : ''}`}>
