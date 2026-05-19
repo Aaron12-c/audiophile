@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import cartIcon from '../assets/icon-cart.svg';
 
 const Navbar: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
 
   return (
     <header className={styles.navbar}>
@@ -12,8 +20,10 @@ const Navbar: React.FC = () => {
         {/* Hamburger Menu for Mobile - Left side */}
         <button 
           className={styles.hamburger} 
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          onClick={toggleMenu}
           aria-label="Toggle menu"
+          aria-expanded={isMenuOpen}
+          aria-controls="main-navigation"
         >
           <span className={styles.hamburgerLine}></span>
           <span className={styles.hamburgerLine}></span>
@@ -22,23 +32,62 @@ const Navbar: React.FC = () => {
 
         {/* Logo - Centered on mobile */}
         <div className={styles.logo}>
-          <Link to="/">audiophile</Link>
+          <NavLink to="/">audiophile</NavLink>
         </div>
 
-      
-        <nav className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}>
+        {/* Navigation Menu */}
+        <nav 
+          id="main-navigation"
+          className={`${styles.nav} ${isMenuOpen ? styles.navOpen : ''}`}
+          aria-label="Main navigation"
+        >
           <ul className={styles.navList}>
-            <li><Link to="/" onClick={() => setIsMenuOpen(false)}>HOME</Link></li>
-            <li><Link to="/headphones" onClick={() => setIsMenuOpen(false)}>HEADPHONES</Link></li>
-            <li><Link to="/speakers" onClick={() => setIsMenuOpen(false)}>SPEAKERS</Link></li>
-            <li><Link to="/earphones" onClick={() => setIsMenuOpen(false)}>EARPHONES</Link></li>
+            <li>
+              <NavLink 
+                to="/" 
+                className={({ isActive }) => isActive ? styles.active : ''}
+                onClick={closeMenu}
+              >
+                HOME
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/headphones" 
+                className={({ isActive }) => isActive ? styles.active : ''}
+                onClick={closeMenu}
+              >
+                HEADPHONES
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/speakers" 
+                className={({ isActive }) => isActive ? styles.active : ''}
+                onClick={closeMenu}
+              >
+                SPEAKERS
+              </NavLink>
+            </li>
+            <li>
+              <NavLink 
+                to="/earphones" 
+                className={({ isActive }) => isActive ? styles.active : ''}
+                onClick={closeMenu}
+              >
+                EARPHONES
+              </NavLink>
+            </li>
           </ul>
         </nav>
 
-        
+        {/* Cart Button */}
         <div className={styles.cart}>
-          <button className={styles.cartButton} aria-label="Shopping cart">
-            <img src={cartIcon} alt="Cart" />
+          <button 
+            className={styles.cartButton} 
+            aria-label="Shopping cart"
+          >
+            <img src={cartIcon} alt="" aria-hidden="true" />
           </button>
         </div>
       </div>

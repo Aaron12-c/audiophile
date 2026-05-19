@@ -23,13 +23,12 @@ const HomePage: React.FC = () => {
 
   return (
     <div className={styles.homepage}>
-      
+      {/* Hero Section */}
       <section 
         className={styles.hero}
         style={{ backgroundImage: `url(${heroImage})` }}
       >
         <div className={styles.heroContainer}>
-          {/* Content - Centered for better visual hierarchy */}
           <div className={`${styles.heroContent} ${isVisible ? styles.fadeInUp : ''}`}>
             <p className={styles.heroSubtitle}>NEW PRODUCT</p>
             <h1 className={styles.heroTitle}>XX99 MARK II HEADPHONES</h1>
@@ -44,7 +43,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-   
+      {/* Categories Section */}
       <section className={styles.categories}>
         <div className={styles.container}>
           <div className={styles.categoryGrid}>
@@ -55,7 +54,7 @@ const HomePage: React.FC = () => {
               </div>
               <h3>HEADPHONES</h3>
               <Link to="/headphones" className={styles.categoryLink}>
-                SHOP <img src={iconArrowRight} alt="→" />
+                SHOP <img src={iconArrowRight} alt="" aria-hidden="true" />
               </Link>
             </div>
 
@@ -66,7 +65,7 @@ const HomePage: React.FC = () => {
               </div>
               <h3>SPEAKERS</h3>
               <Link to="/speakers" className={styles.categoryLink}>
-                SHOP <img src={iconArrowRight} alt="→" />
+                SHOP <img src={iconArrowRight} alt="" aria-hidden="true" />
               </Link>
             </div>
 
@@ -77,31 +76,35 @@ const HomePage: React.FC = () => {
               </div>
               <h3>EARPHONES</h3>
               <Link to="/earphones" className={styles.categoryLink}>
-                SHOP <img src={iconArrowRight} alt="→" />
+                SHOP <img src={iconArrowRight} alt="" aria-hidden="true" />
               </Link>
             </div>
           </div>
         </div>
       </section>
 
-      
+      {/* ZX9 Section */}
       <section className={styles.zx9Section}>
         <div className={styles.zx9Container}>
-          {/* Pattern Circles Background - Fully visible, prominent */}
           <div className={styles.zx9PatternBg}>
             <img 
               src={patternCircles} 
               alt="" 
               className={styles.patternCirclesImg}
+              aria-hidden="true"
             />
           </div>
           
           <div className={styles.zx9Content}>
-           
             <div className={`${styles.zx9Image} ${isVisible ? styles.fadeInLeft : ''}`}>
               <div className={styles.zx9ImageWrapper}>
                 <div className={styles.patternCircleBg}>
-                  <img src={patternCircles} alt="" className={styles.innerPatternCircle} />
+                  <img 
+                    src={patternCircles} 
+                    alt="" 
+                    className={styles.innerPatternCircle}
+                    aria-hidden="true"
+                  />
                 </div>
                 <img 
                   src={imageSpeakerZx9} 
@@ -111,7 +114,6 @@ const HomePage: React.FC = () => {
               </div>
             </div>
             
-           
             <div className={`${styles.zx9Text} ${isVisible ? styles.fadeInRight : ''}`}>
               <h2>ZX9 SPEAKER</h2>
               <p>
@@ -126,7 +128,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-     
+      {/* ZX7 Section */}
       <section className={styles.zx7Section}>
         <div className={styles.container}>
           <div className={`${styles.zx7Card} ${isVisible ? styles.zoomIn : ''}`}>
@@ -140,16 +142,14 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-     
+      {/* YX1 Section */}
       <section className={styles.yx1Section}>
         <div className={styles.container}>
           <div className={styles.yx1Grid}>
-            {/* Left Side - Image */}
             <div className={`${styles.yx1Image} ${isVisible ? styles.fadeInLeft : ''}`}>
               <img src={imageGallery} alt="YX1 Earphones on display" />
             </div>
             
-            {/* Right Side - Text Content with Card */}
             <div className={`${styles.yx1ContentCard} ${isVisible ? styles.fadeInRight : ''}`}>
               <div className={styles.yx1CardWrapper}>
                 <h2>YX1 EARPHONES</h2>
@@ -162,7 +162,7 @@ const HomePage: React.FC = () => {
         </div>
       </section>
 
-      
+      {/* Best Gear Section */}
       <section className={styles.bestGear}>
         <div className={styles.container}>
           <div className={styles.gearGrid}>
@@ -171,11 +171,11 @@ const HomePage: React.FC = () => {
                 BRINGING YOU THE <span>BEST</span> AUDIO GEAR
               </h2>
               <p>
-               Located at the heart of New York City, 
-               Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories.
+                Located at the heart of New York City, 
+                Audiophile is the premier store for high end headphones, earphones, speakers, and audio accessories.
                 We have a large showroom and luxury demonstration rooms available for you to browse and experience a 
                 wide range of our products. 
-               Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.
+                Stop by our store to meet some of the fantastic people who make Audiophile the best place to buy your portable audio equipment.
               </p>
             </div>
             <div className={`${styles.gearImage} ${isVisible ? styles.fadeInRight : ''}`}>
