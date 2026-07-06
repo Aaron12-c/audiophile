@@ -2,10 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import HomePage from './Pages/HomePage';
-import HeadphonePage from './Pages/HeadphonePage'; // Import this
+import HeadphonePage from './Pages/HeadphonePage';
 // Import these when you create them
 // import SpeakersPage from './Pages/SpeakersPage';
 // import EarphonesPage from './Pages/EarphonesPage';
+// import ProductDetailPage from './Pages/ProductDetailPage';
+// import NotFoundPage from './Pages/NotFoundPage';
 
 function App() {
   return (
@@ -14,9 +16,15 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/headphones" element={<HeadphonePage />} /> {/* Changed from HomePage to HeadphonePage */}
+          <Route path="/headphones" element={<HeadphonePage />} />
           <Route path="/speakers" element={<HomePage />} /> {/* Change to SpeakersPage when ready */}
           <Route path="/earphones" element={<HomePage />} /> {/* Change to EarphonesPage when ready */}
+          
+          {/* Product detail routes - currently using HomePage as placeholder */}
+          <Route path="/product/:productId" element={<HomePage />} /> {/* Change to ProductDetailPage when ready */}
+          
+          {/* Catch-all 404 route */}
+          <Route path="*" element={<HomePage />} /> {/* Change to NotFoundPage when ready */}
         </Routes>
         <Footer />
       </div>

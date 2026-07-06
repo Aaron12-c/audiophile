@@ -10,7 +10,7 @@ import xx59Img from '../assets/image-xx59.jpg';
 // Import category images
 import headphonesImg from '../assets/image-headphones.png';
 import speakersImg from '../assets/image-speakers.png';
-import earphonesImg from '../assets/image-earphones.png'; // Changed this line
+import earphonesImg from '../assets/image-earphones.png';
 
 // Import about section image
 import bestGearImg from '../assets/image-best-gear.jpg';
@@ -26,7 +26,7 @@ const HeadphonePage: React.FC = () => {
         <h1>HEADPHONES</h1>
       </header>
 
-      {/* Product Section - XX99 Mark II (Left) */}
+      {/* Product Section - XX99 Mark II */}
       <section className={styles.productSection}>
         <div className={styles.productContainer}>
           <div className={styles.productImage}>
@@ -36,7 +36,7 @@ const HeadphonePage: React.FC = () => {
             <span className={styles.newProductBadge}>NEW PRODUCT</span>
             <h2>XX99 MARK II HEADPHONES</h2>
             <p>
-              The new XX99 Mark II headphones is the pinnacle of pristine audio. 
+              The new XX99 Mark II headphones are the pinnacle of pristine audio. 
               It redefines your premium headphone experience by reproducing the 
               balanced depth and precision of studio-quality sound.
             </p>
@@ -47,7 +47,7 @@ const HeadphonePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Product Section - XX99 Mark I (Right) */}
+      {/* Product Section - XX99 Mark I */}
       <section className={styles.productSection}>
         <div className={`${styles.productContainer} ${styles.productContainerReverse}`}>
           <div className={styles.productImage}>
@@ -67,7 +67,7 @@ const HeadphonePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Product Section - XX59 (Left) */}
+      {/* Product Section - XX59 */}
       <section className={styles.productSection}>
         <div className={styles.productContainer}>
           <div className={styles.productImage}>
@@ -87,63 +87,97 @@ const HeadphonePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Category Navigation with Images */}
+      {/* Category Navigation */}
       <section className={styles.categoryNav}>
         <div className={styles.categoryGrid}>
-          {/* Headphones Category */}
           <div className={styles.categoryCard}>
             <div className={styles.categoryImageWrapper}>
-              <img src={headphonesImg} alt="Headphones" className={styles.categoryImage} />
+              <img 
+                src={headphonesImg} 
+                alt="Headphones" 
+                className={styles.categoryImage} 
+              />
             </div>
             <h3>HEADPHONES</h3>
             <Link to="/headphones" className={styles.shopLink}>
-              SHOP <img src={arrowIcon} alt="Arrow" className={styles.arrowIcon} />
+              SHOP 
+              <img 
+                src={arrowIcon} 
+                alt="" 
+                aria-hidden="true" 
+                className={styles.arrowIcon} 
+              />
             </Link>
           </div>
 
-          {/* Speakers Category */}
           <div className={styles.categoryCard}>
             <div className={styles.categoryImageWrapper}>
-              <img src={speakersImg} alt="Speakers" className={styles.categoryImage} />
+              <img 
+                src={speakersImg} 
+                alt="Speakers" 
+                className={styles.categoryImage} 
+              />
             </div>
             <h3>SPEAKERS</h3>
             <Link to="/speakers" className={styles.shopLink}>
-              SHOP <img src={arrowIcon} alt="Arrow" className={styles.arrowIcon} />
+              SHOP 
+              <img 
+                src={arrowIcon} 
+                alt="" 
+                aria-hidden="true" 
+                className={styles.arrowIcon} 
+              />
             </Link>
           </div>
 
-          {/* Earphones Category */}
           <div className={styles.categoryCard}>
             <div className={styles.categoryImageWrapper}>
-              <img src={earphonesImg} alt="Earphones" className={styles.categoryImage} />
+              <img 
+                src={earphonesImg} 
+                alt="Earphones" 
+                className={styles.categoryImage} 
+              />
             </div>
             <h3>EARPHONES</h3>
             <Link to="/earphones" className={styles.shopLink}>
-              SHOP <img src={arrowIcon} alt="Arrow" className={styles.arrowIcon} />
+              SHOP 
+              <img 
+                src={arrowIcon} 
+                alt="" 
+                aria-hidden="true" 
+                className={styles.arrowIcon} 
+              />
             </Link>
           </div>
         </div>
       </section>
 
-      {/* About Section with Image */}
-      <section className={styles.aboutSection}>
-        <div className={`${styles.aboutContainer} ${styles.aboutContainerReverse}`}>
-          <div className={styles.aboutContent}>
-            <h2>
-              BRINGING YOU THE <span>BEST AUDIO GEAR</span>
-            </h2>
-            <p>
-              Located at the heart of New York City, Audiophile is the premier 
-              store for high-end headphones, earphones, speakers, and audio 
-              accessories. We have a large showroom and luxury demonstration 
-              rooms available for you to browse and experience a wide range of 
-              our products. Stop by our store to meet some of the fantastic 
-              people who make Audiophile the best place to buy your portable 
-              audio equipment.
-            </p>
-          </div>
-          <div className={styles.aboutImage}>
-            <img src={bestGearImg} alt="Best Audio Gear" />
+      {/* Best Gear Section - MATCHING HOMEPAGE LAYOUT: Content LEFT, Image RIGHT */}
+      <section className={styles.bestGear}>
+        <div className={styles.container}>
+          <div className={styles.gearGrid}>
+            {/* Content - LEFT side (matching HomePage) */}
+            <div className={styles.gearContent}>
+              <h2>
+                BRINGING YOU THE <span>BEST</span> AUDIO GEAR
+              </h2>
+              <p>
+                Located at the heart of New York City, Audiophile is the premier 
+                store for high-end headphones, earphones, speakers, and audio 
+                accessories. We have a large showroom and luxury demonstration 
+                rooms available for you to browse and experience a wide range of 
+                our products. Stop by our store to meet some of the finest audio 
+                products you'll find at Audiophile.
+              </p>
+            </div>
+            
+            {/* Image - RIGHT side (matching HomePage) */}
+            <div className={styles.gearImage}>
+              <img 
+                src={bestGearImg} 
+                alt="Audiophile store showroom with premium audio equipment" 
+              />
+            </div>
           </div>
         </div>
       </section>
